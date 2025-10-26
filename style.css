@@ -365,3 +365,106 @@ footer .footer-row {
     gap: 1rem;
   }
 }
+
+/* Social media - floating bar */
+.social-fixed {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+.social-fixed a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #10182F;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(16, 24, 47, 0.28);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.social-fixed a:hover {
+  transform: translateY(-3px);
+  background: #27406a;
+}
+.social-fixed i {
+  font-size: 20px;
+}
+
+/* Footer social icons */
+.social-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.social-footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  color: #bfbfbf;
+  text-decoration: none;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+.social-footer a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.04);
+}
+.social-footer i { font-size: 18px; }
+
+@media (max-width: 768px) {
+  /* hide floating bar on small screens to avoid occlusion */
+  .social-fixed { display: none; }
+  .social-footer { justify-content: center; width: 100%; }
+}
+
+/* Footer contact styling */
+.footer-col .address {
+  color: #bfbfbf;
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+.footer-col .address a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-links {
+  margin-top: 8px;
+  color: #bfbfbf;
+  font-size: 0.95rem;
+}
+.contact-links a {
+  color: #bfbfbf;
+  text-decoration: none;
+}
+.contact-links a:hover { color: #fff; }
+
+/* address icons & opening hours */
+.footer-col .address i,
+.footer-col .hours i {
+  color: #f2c94c; /* subtle accent */
+  margin-right: 8px;
+  font-size: 1.05rem;
+  vertical-align: middle;
+}
+.footer-col .hours {
+  color: #bfbfbf;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+.wa-link {
+  color: #25D366; /* WhatsApp green */
+  font-weight: 600;
+}
+.wa-link:hover { color: #1da851; }
